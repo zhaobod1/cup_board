@@ -1,0 +1,50 @@
+<script language="JavaScript"> 
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6. 
+{ 
+    var arVersion = navigator.appVersion.split("MSIE") 
+    var version = parseFloat(arVersion[1]) 
+    if ((version >= 5.5) && (document.body.filters)) 
+    { 
+       for(var j=0; j<document.images.length; j++) 
+       { 
+          var img = document.images[j] 
+          var imgName = img.src.toUpperCase() 
+          if (imgName.substring(imgName.length-3, imgName.length) == "PNG") 
+          { 
+             var imgID = (img.id) ? "id='" + img.id + "' " : "" 
+             var imgClass = (img.className) ? "class='" + img.className + "' " : "" 
+             var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' " 
+             var imgStyle = "display:inline-block;" + img.style.cssText 
+             if (img.align == "left") imgStyle = "float:left;" + imgStyle 
+             if (img.align == "right") imgStyle = "float:right;" + imgStyle 
+             if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle 
+             var strNewHTML = "<span " + imgID + imgClass + imgTitle 
+             + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";" 
+             + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader" 
+             + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>" 
+             img.outerHTML = strNewHTML 
+             j = j-1 
+          } 
+       } 
+    }    
+} 
+window.attachEvent("onload", correctPNG); 
+</script>
+<link href="{dede:global.cfg_templeturl/}/cgcss/chugui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body bgcolor="#eaeaea">
+<div class="main01">
+<div class="top">
+<div class="logo"><img src="{dede:global.cfg_templeturl/}/cgimg/logo.png" width="215" height="68" /></div>
+<div class="nav">
+<ul>
+<li id="nav01"><a href="{dede:global.cfg_cmsurl/}/" >首页</a></li>
+{dede:channel type='top' row='10' currentstyle="<li id='nav02'><a href='~typelink~' ~rel~>~typename~</a></li>"}
+<li id="nav02"><a href="[field:typeurl/]" [field:rel/]>[field:typename/]</a></li>
+{/dede:channel}
+
+
+</ul>
+</div>
+</div>

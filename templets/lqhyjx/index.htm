@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无心磨床,高精度无心磨床,外圆磨床_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jcarousellite.js"></script>
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<div id="mainbody">
+	<div class="mbgt"></div>
+    <div class="mainleft">
+    	<div class="til"><b>产品分类</b><a href="/cpfl/">MORE>></a></div>
+        <ul>
+          {dede:channel type='son'  typeid=4,5,6,7,8,9,10,11,12,13}
+	  	   <li><a  href='[field:typeurl/]'>[field:typename/]</a></li>
+          {/dede:channel}
+        </ul>
+      <div class="til"><b>联系我们</b></div>
+        <div class="leco">
+        许  源：15251616636<br />
+        陆  磊：18915330230<br />
+        电  话：0510 88793928<br />
+        传  真：0510 88793928<br />
+        地  址：无锡市锡山区东港镇      </div>
+    </div>
+    <div class="mainright">
+    	<div class="inj">
+        	<div class="til"><b>公司简介</b><a href="/gsjj/">MORE>></a></div>
+            <div class="inj_m">
+            	<div class="inj_m_w">
+				<p>   无锡尼维尔机械有限公司主要生产<a href="">无心磨床</a>、高精度无心磨床等专用设备。
+               </p>
+               <p>公司产品广泛用于光纤领域,高精度无心磨床产品主要用于军工、航天航空、汽车、五金行业。 。</p>
+               <p>本公司恪守“以质量求生存，以信誉求发展”的经营原则，创一流质量，树一流的信誉，根据客户的发展需要，不断地提供经济实用的产品和高效完善的售后服务，携手新老用户共同发展。</p>
+                </div>
+				<img src="{dede:global.cfg_templets_skin/}/images/p2.jpg" />
+            </div>
+        </div>
+        <div class="incp">
+        	<div class="til"><b>磨床展示</b><a href="/cpfl/cper/">MORE>></a></div>
+            <div class="incp_m">
+            	<span id="prev-01"><img src="{dede:global.cfg_templets_skin/}/images/left.gif" /></span>
+               <div   id="demo-01" style="padding:0px;margin:0px;float:left;">
+                <ul>
+		        {dede:arclist row=10 orderby=pubdate  typeid='1' type='image.' imgwidth='210' imgheight='170'}
+		        <li><a  href="[field:arcurl/]">[field:image/][field:title/]</a></li>
+                {/dede:arclist}
+                </ul>
+                </div>
+                <span id="next-01"><img src="{dede:global.cfg_templets_skin/}/images/right.gif" /></span>
+            </div>
+        </div>
+ <script type="text/javascript">
+    $(document).ready(function(){
+        $('#demo-01').jCarouselLite({
+          btnPrev: '#prev-01',
+            btnNext: '#next-01',
+         auto: 1200,
+         speed: 3000,
+            visible:3
+        });
+    });
+    </script>
+        <div class="innews" style="float:left">
+        	<div class="til"><b>行业新闻</b><a href="/xyxw/">MORE>></a></div>
+            <div class="innewsm">
+            	<ul>
+               {dede:arclist titlelen='60' row='6' typeid=14}
+	            <li><a  href="[field:arcurl /]">[field:title /]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span></li>
+               {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+         <div class="innews" style="float:right; margin-right:4px;">
+        	<div class="til"><b>公司新闻</b><a href="/a/gsxw/">MORE>></a></div>
+            <div class="innewsm">
+            	<ul>
+	             {dede:arclist titlelen='60' row='6'typeid=15}
+	              <li><a  href="[field:arcurl /]">[field:title /]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span></li>
+                 {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="zhans">
+    	<div class="til"><b>精品推荐</b><a href="/cpfl/cpsan/">MORE>></a></div>
+  <div   id="demo-02" style="padding:0px;margin:0px;float:left;">
+      <ul>
+	  	{dede:arclist row=10 orderby=pubdate type='image.' imgwidth='172' imgheight='160'}
+		 <li><a href="[field:arcurl/]">[field:image/][field:title/]</a></li>
+        {/dede:arclist}  
+       </ul>
+</div>
+    </div>
+    <div class="mbgd"></div>
+</div>
+ <script type="text/javascript">
+    $(document).ready(function(){
+        $('#demo-02').jCarouselLite({ 
+         auto: 1200,
+         speed: 6000,
+            visible:5
+        });
+    });
+    </script>
+<div class="link">友情链接：
+ {dede:flink linktype='2' row='24'}[field:link /] {/dede:flink} 
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

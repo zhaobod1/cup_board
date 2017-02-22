@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field name='typename'/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<meta name="keywords" content="{dede:field.keywords/}" />
+{dede:include filename="head.htm"/}
+<div class="banner2">
+   <!--<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="976" height="402">
+    <param name="movie" value="{dede:global.cfg_templeturl/}/cgswf/banner1.swf" />
+    <param name="quality" value="high" />
+    <embed src="{dede:global.cfg_templeturl/}/cgswf/banner1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="976" height="402"></embed>
+  </object> -->
+  <script type=text/javascript>
+var swf_width=976 
+var swf_height=402 
+var files='{dede:global.cfg_templets_skin/}/images/banner1.jpg|{dede:global.cfg_templets_skin/}/images/banner2.jpg|{dede:global.cfg_templets_skin/}/images/banner3.jpg|{dede:global.cfg_templets_skin/}/images/banner5.jpg|{dede:global.cfg_templets_skin/}/images/banner6.jpg'
+var links=''
+var texts=''
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="{dede:global.cfg_templets_skin/}/swf/flash.swf"><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'">');
+document.write('<embed src="{dede:global.cfg_templets_skin/}/swf/flash.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'&menu="false"" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>');
+</script>
+</div>
+
+</div>
+<div class="zy">
+{dede:include filename="left.htm"/}
+<div class="zy_right">
+<div class="zy_right01">
+<div class="zy_right_top"><div class="zy_right_top_left"><table width="100%" border="0" cellpadding="0"  cellspacing="0" align="center">
+  <tr>
+    <td  align="center" height="30"><span>NEWS</span></td>
+  </tr>
+  <tr>
+    <td align="center">{dede:field.typename/}</td>
+  </tr>
+</table>
+</div>
+<div class="zy_right_top_right">您当前的位置:{dede:field name='position'/}</div>
+</div>
+
+<div style="margin-top:20px; color:#636363; width:700px; line-height:22px; padding:0px 20px 0px 50px;">
+<DIV class=product-2>
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+<DIV style="TEXT-ALIGN: left; LINE-HEIGHT: 30px; HEIGHT: 35px">您的姓名：<input type='text' name='name' id='name' style='width:80px' />
+ 性别： <select name='sex' style='width:40px'><option value='男'>男</option><option value='女'>女</option></select></DIV>
+ 
+<DIV style="TEXT-ALIGN: left; LINE-HEIGHT: 30px; HEIGHT: 35px">公司名称：<input type='text' name='company' id='company' style='width:80px'  class='intxt' value='' /></DIV>
+
+<DIV style="TEXT-ALIGN: left; LINE-HEIGHT: 30px; HEIGHT: 35px">联系电话：<input type='text' name='tel' id='tel' style='width:250px'  class='intxt' value='' /><SPAN style="COLOR: red">*</SPAN></DIV>
+
+<DIV style="TEXT-ALIGN: left; LINE-HEIGHT: 30px; HEIGHT: 35px">联系邮箱：<input type='text' name='email' id='email' style='width:80px'  class='intxt' value='' /> <SPAN style="COLOR: red">*</SPAN></DIV>
+
+<DIV style="TEXT-ALIGN: left; LINE-HEIGHT: 30px; HEIGHT: 35px">联系地址：<input type='text' name='addr' id='addr' style='width:150px'  class='intxt' value='' /> <SPAN style="COLOR: red">*</SPAN></DIV>
+
+<DIV style="TEXT-ALIGN: left; LINE-HEIGHT: 30px">留言内容：<textarea name='content' id='content' rows="5" style='width:150px'></textarea>
+</DIV>
+<input type="hidden" name="dede_fields" value="name,text;sex,select;company,text;tel,text;email,text;addr,text;content,multitext" />
+<input type="hidden" name="dede_fieldshash" value="7ae72cd539f057d834a2a4abab29d34e" />
+<DIV style="TEXT-ALIGN: left; LINE-HEIGHT: 35px; HEIGHT: 35px; PADDING-TOP: 5px">
+<input type="submit" name="submit" value="提交信息"  />
+<input type="reset" name="reset" value="重 置" /></DIV></form></DIV>
+</div>
+
+</div>
+
+<div class="zy_right_foot"><img src="{dede:global.cfg_templeturl/}/cgimg/zy_right_foot.jpg" /></div>
+</div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

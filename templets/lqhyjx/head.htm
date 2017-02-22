@@ -1,0 +1,40 @@
+<div id="head">
+	<div class="top">
+		<div class="logo"><img src="{dede:global.cfg_templets_skin/}/images/logo.gif" /></div>
+        <span><a href="">返回首页</a>
+        <a style="CURSOR: hand" onClick="window.external.addFavorite('{dede:global.cfg_cmsurl/}','{dede:global.cfg_cmsurl/}/')" title="{dede:global.cfg_cmsurl/}/">收藏本站</a>
+		
+		
+        <a href="contact.html">联系我们</a></span>
+    </div>
+    <div class="nav">
+        <ul>
+          <li><a href="{dede:global.cfg_cmsurl/}/">网站首页</a></li>
+		   {dede:channel type='top' row='10' }
+		                <li><a  href='[field:typeurl/]'>[field:typename/]</a></li>
+       	   {/dede:channel}	
+            </ul>
+    	<span id="cg"></span>
+      <script>setInterval("cg.innerHTML=new Date().toLocaleString()",1000);</script>
+	</div>
+</div>
+<div class="banner">
+<script type="text/javascript">
+        <!-- 
+        var focus_width=999;
+        var focus_height=300;
+        var text_height=0;
+        var swf_height = focus_height+text_height;
+        var pics = "";
+        var links = "";
+        var texts = "";
+        pics += "{dede:global.cfg_templets_skin/}/images/banner.jpg|{dede:global.cfg_templets_skin/}/images/1.jpg|{dede:global.cfg_templets_skin/}/images/2.jpg"; 
+ 
+        document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+        document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="{dede:global.cfg_templets_skin/}/images/focus.swf"><param name="quality" value="high"><param name="bgcolor" value="#FFFFFF">');
+        document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+        document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+        document.write('<embed src="{dede:global.cfg_templets_skin/}/images/focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" ?bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');  document.write('</object>');
+        //-->
+        </script>
+</div>

@@ -1,0 +1,1 @@
+<div style="float:left; width:200px; line-height:30px; color:#333333; margin-left:10px;  text-align:center"><a href="[field:arcurl/]" target="_blank"><img class="trans_img" onmouseover=transImg(this,0) onmouseout=transImg(this,1) src="[field:litpic/]" width="190" height="140" /></a><a href="[field:arcurl/]">[field:title/]</a></div>

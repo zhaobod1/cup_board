@@ -1,0 +1,2 @@
+INSERT INTO `dede_uploads` VALUES('1','3','不锈钢橱柜11','/uploads/allimg/130405/125AR460-0.jpg','1','500','380','0','40149','1365137819','1');
+INSERT INTO `dede_uploads` VALUES('2','4','不锈钢柜体03','/uploads/allimg/130405/125I23427-0.jpg','1','650','462','0','33934','1365137853','1');
